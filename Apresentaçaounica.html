@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Apresentação</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .pagina {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      width: 90%;
+      max-width: 1200px;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .pagina.ativa {
+      display: flex;
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #4a90e2;
+    }
+
+    h1 {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 36px;
+      font-size: 18px;
+      border: none;
+      background-color: #4a90e2;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #357abd;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .perfil {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .texto {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    @media (max-width: 768px) {
+      .perfil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .texto {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pagina ativa" id="pagina1">
+    <h1>👨‍🏫 Flavio Carvalho Santos</h1>
+    <div class="perfil">
+      <img src="https://flaviocarvalhosantos.github.io/flaviocarvalhosantos/imagemdeflavio.jpg" alt="Flavio Carvalho Santos">
+      <div class="texto">
+        <ul>
+          <li>🎓 Assistente Social</li>
+          <li>📚 Docente Superior</li>
+          <li>🧭 Orientador Educacional</li>
+          <li>🎓 Pós-graduando em Serviço Social na Educação</li>
+          <li>🤝 Membro do NAS – Núcleo de Assistentes Sociais da Região Tocantina</li>
+          <li>⚖️ Membro do Centro de Direitos Humanos Padre Josimo</li>
+          <li>👨‍🏫 Professor Temporário na UATI – Universidade Aberta da Terceira Idade</li>
+          <li>🌱 Atua na defesa dos direitos dos povos Krikatis – Monte Altos/MA</li>
+        </ul>
+      </div>
+    </div>
+    <button onclick="mostrarPagina('pagina2')">👉 Avançar</button>
+  </div>
+
+  <div class="pagina" id="pagina2">
+    <h1>🏃‍♂️ Patrício Benício Alves</h1>
+    <div class="perfil">
+      <img src="https://flaviocarvalhosantos.github.io/flaviocarvalhosantos/imagemdepatricio.jpg" alt="Patrício Benício Alves">
+      <div class="texto">
+        <ul>
+          <li>🎓 Profissional de Educação Física</li>
+          <li>🧭 Orientador Educacional</li>
+          <li>🏥 Atua na saúde – Prefeitura de São Miguel/TO</li>
+          <li>🎓 Formado pela UNISULMA</li>
+          <li>💪 Especialista em Fisiologia e Prescrição do Exercício</li>
+          <li>🥗 Pós-graduando em Nutrição no Esporte e no Exercício</li>
+          <li>👮‍♂️ Presidente do Conselho Comunitário de Segurança Pública de São Miguel/TO</li>
+        </ul>
+      </div>
+    </div>
+    <button onclick="mostrarPagina('pagina3')">👉 Avançar</button>
+  </div>
+
+  <div class="pagina" id="pagina3">
+    <h1>📂 Projeto de Extensão</h1>
+    <p style="font-size: 20px; text-align: center;">
+      Acesse o link abaixo para visualizar a apresentação completa do projeto:
+    </p>
+    <button>
+      <a href="https://flaviocarvalhosantos.github.io/flaviocarvalhosantos/Projeto%20de%20extens%C3%A3o/Apresenta%C3%A7aoprojetoexterns%C3%A3o.html" target="_blank">🚀 Iniciar Apresentação</a>
+    </button>
+  </div>
+
+  <script>
+    function mostrarPagina(id) {
+      document.querySelectorAll('.pagina').forEach(p => p.classList.remove('ativa'));
+      document.getElementById(id).classList.add('ativa');
+    }
+  </script>
+</body>
+</html>
