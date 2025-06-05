@@ -6,28 +6,29 @@
   <title>Apresentação</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f4f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* alterado de height para min-height */
+  overflow: auto;    /* alterado de hidden para auto */
     }
 
     .pagina {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      text-align: left;
-      width: 90%;
-      max-width: 1200px;
-      padding: 40px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      animation: fadeIn 0.8s ease-in-out;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 90%;
+  max-width: 1200px;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease-in-out;
+  margin: 20px 0; /* adiciona margem para não ficar colado ao topo */
     }
 
     .pagina.ativa {
@@ -75,15 +76,16 @@
     }
 
     button {
-      margin-top: 30px;
-      padding: 12px 36px;
-      font-size: 18px;
-      border: none;
-      background-color: #4a90e2;
-      color: white;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+  margin-top: 30px;
+  padding: 12px 36px;
+  font-size: 18px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center; /* para garantir centralização */
     }
 
     button:hover {
